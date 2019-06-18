@@ -6,7 +6,8 @@ const registerEmail  = document.querySelector('#registerEmail')
 const signUpButton = document.querySelector('#signUp')
 
 
-const change = document.querySelector('#login')
+
+ const change = document.querySelector('#login')
  const change2 = document.querySelector('#register')
 
 //select the login inputs
@@ -19,8 +20,10 @@ const users = []
 
 //adding event listener on registration to save registration details in array users
 signUpButton.addEventListener('click', (e)=>{
-  if(registerName.value === '' || registerUsername.value ==='' || registerPassword.value ==='' || registerEmail.value===''){
-    alert('you cant leave any feild empty')
+
+  if(registerName.value =="" || registerUsername.value =="" || registerPassword.value =="" || registerEmail.value==""){
+    // alert('you cant leave any feild empty')
+    // change2.style.display = 'grid'
   }else{
 const user = {
     name : registerName.value, 
@@ -31,16 +34,18 @@ const user = {
   users.push(user)
   localStorage.setItem('users' , JSON.stringify(users))
  
- change2.style.display = 'none'
- change.style.display = 'flex'
+
     
     e.preventDefault()}
 })
 
 //adding event listener to login to check 
 signInButton.addEventListener('click' , (e)=>{
-let decider;
-const newUsers = JSON.parse(localStorage.getItem('users'))
+  
+if(localStorage.getItem('users') == null){
+newUsers = []
+}else{
+newUsers = JSON.parse(localStorage.getItem('users'))
 newUsers.forEach(user => {
 if(user.username == loginName.value && user.password == loginPassword.value){
  alert('welcome')
@@ -48,12 +53,19 @@ if(user.username == loginName.value && user.password == loginPassword.value){
 }  else{
   alert('username and password not found')
 }
-
-});
+})}
 
 e.preventDefault()
 })
-document.querySelector('#get').addEventListener('click', ()=>{
-change2.style.display = 'flex'
+
+
+const gotoregister = document.querySelector('#get')
+gotoregister.addEventListener('click', ()=>{
+  if(registerName.value =='' ){
+    change2.style.display = 'grid'
  change.style.display = 'none'
+    // alert('you cannot leave a feild empty')
+  } else {
+    
+}
 })
