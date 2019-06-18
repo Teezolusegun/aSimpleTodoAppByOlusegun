@@ -22,13 +22,13 @@ display.addEventListener('click' , (e)=>{
       e.target.parentElement.remove();
     
 })
-// const logout = document.querySelector('.logout')
-// logout.addEventListener('click', (e)=>{
-//     location.replace('form.html')
+const logout = document.querySelector('.logout')
+logout.addEventListener('click', (e)=>{
+    location.replace('form.html')
 
-//     console.log(logout)
-//     e.preventDefault()
-// })
+    console.log(logout)
+    e.preventDefault()
+})
 
 
 
