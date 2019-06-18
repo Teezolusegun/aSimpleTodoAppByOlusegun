@@ -1,0 +1,36 @@
+body{
+    height: 100%;
+}
+
+
+
+#login{
+    background-color: blue;
+    height: 20%;
+    text-align: center;
+    
+    width: 50%;
+    margin-left: 25%;
+    margin-top:15%;
+}
+#login input{
+    border-radius: 5px;
+    height: 40px;
+    width: 60%;
+}
+#register{
+    
+    
+    
+    margin-top : 20%;
+    display: none;
+    
+}
+#register input{
+    border-radius: 5px;
+    width: 60%;
+    height: 10%;
+}
+#theform{
+    text-align: center;
+}
