@@ -22,8 +22,8 @@ const users = []
 signUpButton.addEventListener('click', (e)=>{
 
   if(registerName.value =="" || registerUsername.value =="" || registerPassword.value =="" || registerEmail.value==""){
-    alert('you cant leave any feild empty')
-    change2.style.display = 'grid'
+    // alert('you cant leave any feild empty')
+    // change2.style.display = 'grid'
   }else{
 const user = {
     name : registerName.value, 
